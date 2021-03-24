@@ -23,10 +23,20 @@
             <asp:ScriptReference Name="jquery.ui.combined" />
         </Scripts>
     </asp:ScriptManager>
-    <header>
+    <header id="site-header">
         <div class="content-wrapper">
             <div class="float-left">
-                <p class="site-title"><a runat="server" href="~/">Ihr Logo hier einfügen</a></p>
+                <p class="site-title"><a runat="server" href="~/">Tutorial Demo App</a></p>
+                <nav>
+                    <asp:Menu ID="Menu1" CssClass="ui-menu" runat="server" ItemWrap="True" Orientation="Horizontal" RenderingMode="List" StaticSubMenuIndent="16px">
+                        <Items>
+                            <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Default.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Demo Seite 1" Value="Demo Seite 1" NavigateUrl="~/DemoSeite1.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Kontakt" Value="Kontakt" NavigateUrl="~/Contact.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Info" Value="Info" NavigateUrl="~/About.aspx"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </nav>   
             </div>
             <div class="float-right">
                 <section id="login">
@@ -54,24 +64,18 @@
                         <li><a runat="server" href="~/Contact">Kontakt</a></li>
                     </ul>
                 </nav>--%><!--LegecayNav-->
-                <asp:Menu ID="Menu1" CssClass="ui-menu" runat="server" ItemWrap="True" Orientation="Horizontal" RenderingMode="List" StaticSubMenuIndent="16px">
-                    <Items>
-                        <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Default.aspx"></asp:MenuItem>
-                        <asp:MenuItem Text="Demo Seite 1" Value="Demo Seite 1" NavigateUrl="~/DemoSeite1.aspx"></asp:MenuItem>
-                        <asp:MenuItem Text="Kontakt" Value="Kontakt" NavigateUrl="~/Contact.aspx"></asp:MenuItem>
-                        <asp:MenuItem Text="Info" Value="Info" NavigateUrl="~/About.aspx"></asp:MenuItem>
-                    </Items>
-                </asp:Menu>
             </div>
         </div>
     </header>
-    <div id="body">
-        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
-        <section class="content-wrapper main-content clear-fix">
-            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
-        </section>
-    </div>
-    <footer>
+        <main id="site-content">
+            <div id="body">
+                <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+                <section class="content-wrapper main-content clear-fix">
+                    <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+                </section>
+            </div>
+        </main>
+    <footer id="site-footer">
         <div class="content-wrapper">
             <div class="float-left">
                 <p>

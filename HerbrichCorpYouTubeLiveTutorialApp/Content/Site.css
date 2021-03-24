@@ -8,7 +8,6 @@ html {
 
 body {
     background-color: #fff;
-    border-top: solid 10px #000;
     color: #333;
     font-size: .85em;
     font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
@@ -125,8 +124,50 @@ footer {
     font-size: .8em;
     height: 100px;
 }
-
-
+/* site header
+----------------------------------------------------------*/
+header#site-header {
+    background-color: #ff0000;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 8rem;
+}
+/* site header navigation
+----------------------------------------------------------*/
+header#site-header nav {
+    margin-top:19px;
+}
+header#site-header nav a#Menu1_SkipLink,
+header#site-header nav a[href="#Menu1_SkipLink"]{
+    display:none;
+}
+header#site-header nav div.ui-menu {
+    border: #f60c0c solid 1px;
+}
+header#site-header nav a{
+    margin:4px;
+    line-height: 37px;
+    color:#ffffff;
+    /*border-right: #ffffff dotted 1px;*/
+}
+/* site footer
+----------------------------------------------------------*/
+footer#site-footer {
+    background-color: #ff0000;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+/* site main
+----------------------------------------------------------*/
+main#site-content {
+    position: relative;
+    margin-top:8rem;
+    width: 100%;
+    overflow: scroll;
+    height: 60em;
+}
 /* site title
 ----------------------------------------------------------*/
 .site-title {
